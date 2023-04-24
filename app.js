@@ -101,7 +101,31 @@ sonuc = text2.startsWith("Lorem"); //Lorem ile mi başlıyor true veya false dö
 sonuc = text2.endsWith("elit.");//elit. ile mi bitiyor true veya false döndürür.//true
 console.log(sonuc);
 
-
+/ SORULAR
+let url = "https://www.google.com";
+let str = "Lorem ipsum dolor sit amet";
+//1-url kaç karakterlidir?
+let sonuc1 = "";
+sonuc1 = url.length;
+//2-str kaç kelimeden oluşmaktadır?
+sonuc1 = str.split(" ").length;
+//3-url https ile mi başlıyor?
+sonuc1 = url.startsWith("https");
+if (sonuc1) {
+  //   console.log("evet başlıyor");
+}
+//4-str içerisinde ipsum kelimesi var mı?
+sonuc1 = str.includes("ipsum");
+if (sonuc1) {
+  console.log("evet var");
+} else {
+  console.log("hayır yok");
+}
+//5-url ve str değişkenlerini kullanarak aşağıdaki string bilgiyi oluşturunuz.
+//https://www.google.com/lorem-ipsum-dolor-sit-amet
+str = str.toLowerCase().replaceAll(" ", "-");
+sonuc1 = `${url}/${str}`;
+console.log(sonuc1);
 
 
 
