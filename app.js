@@ -157,3 +157,41 @@ console.log(isPalindrome("ali"));
 console.log(isPalindrome("kazak"));
 
 
+//8-konsoldan girilen harf sayısının kaç tane olduğunu aşağıda verilen metinde bulan uygulamayı yazınız.
+let metin =
+  "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, omnis temporibus dignissimos officia adipisci sed quasi ratione dolorum neque cumque quia quibusdam ullam possimus. Magnam facilis tenetur, laudantium a dolorum explicabo, corporis deleniti aspernatur excepturi distinctio, voluptate est! Quibusdam, blanditiis?";
+// let harf = prompt("harfi giriniz");
+function harfBul(harf) {
+  let counter = 0;
+  for (let i = 0; i < metin.length; i++) {
+    if (metin.charAt(i).toLowerCase() === harf.toLowerCase()) counter += 1;
+  }
+  return counter;
+}
+// console.log(harfBul(harf));
+// 9- Belirli bir string ifadenin içindeki sesli harfleri bulan fonksiyonu yazınız?
+// console.log(findVowels('hello world')) // output: eoo
+const sntc = "hello world";
+function findVowels(sntc) {
+  let vowels = "";
+  for (let i = 0; i < sntc.length; i++) {
+    if (
+      sntc[i] == "a" ||
+      sntc[i] == "e" ||
+      sntc[i] == "ı" ||
+      sntc[i] == "i" ||
+      sntc[i] == "o" ||
+      sntc[i] == "ö" ||
+      sntc[i] == "u" ||
+      sntc[i] == "ü"
+    ) {
+      vowels += sntc[i];
+    }
+  }
+  return vowels;
+}
+console.log(findVowels(sntc));
+console.log(findVowels("alex"));
+console.log(findVowels("mehmet"));
+console.log(findVowels("araba"));
+console.log(findVowels("ahmet"));
