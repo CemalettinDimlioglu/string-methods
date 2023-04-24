@@ -101,7 +101,7 @@ sonuc = text2.startsWith("Lorem"); //Lorem ile mi başlıyor true veya false dö
 sonuc = text2.endsWith("elit.");//elit. ile mi bitiyor true veya false döndürür.//true
 console.log(sonuc);
 
-/ SORULAR
+ // SORULAR
 let url = "https://www.google.com";
 let str = "Lorem ipsum dolor sit amet";
 //1-url kaç karakterlidir?
@@ -126,14 +126,34 @@ if (sonuc1) {
 str = str.toLowerCase().replaceAll(" ", "-");
 sonuc1 = `${url}/${str}`;
 console.log(sonuc1);
-
-
-
-
-
-
-
-
-
+// 6- Belirli bir string ifadenin tersini bulan fonksiyonu yazınız?
+// console.log(reverseString('hello world')) // output: dlrow olleh
+function reverseString(metin3) {
+  let str1 = "";
+  for (let i = metin3.length - 1; i >= 0; i--) {
+    str1 += metin3[i];
+  }
+  return str1;
+}
+console.log(reverseString("hello world"));
+console.log(reverseString("ali"));
+console.log(reverseString("veli"));
+// 7- Belirli bir string ifadenin terside aynı kelime ise buna palindrome kelime denir. Örn: NAZAN, KAZAK, TİRİT ..Girilen bir kelimenin palindrome olup olmadığını bulan fonksiyonu yazınız...
+function reverseString1(dz) {
+  let trs = "";
+  for (let i = dz.length - 1; i >= 0; i--) {
+    trs += dz[i];
+  }
+  return trs;
+}
+const isPalindrome = function (w) {
+  const reversed = reverseString1(w);
+  return reversed == w
+    ? `${w} bir palindrome texttir`
+    : `${w} bir palindrome text değildir`;
+};
+console.log(isPalindrome("nazan"));
+console.log(isPalindrome("ali"));
+console.log(isPalindrome("kazak"));
 
 
