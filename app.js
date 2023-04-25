@@ -138,84 +138,84 @@ function reverseString(metin3) {
 console.log(reverseString("hello world"));
 console.log(reverseString("ali"));
 console.log(reverseString("veli"));
-// 7- Belirli bir string ifadenin terside aynı kelime ise buna palindrome kelime denir. Örn: NAZAN, KAZAK, TİRİT ..Girilen bir kelimenin palindrome olup olmadığını bulan fonksiyonu yazınız...
-function reverseString1(dz) {
-  let trs = "";
-  for (let i = dz.length - 1; i >= 0; i--) {
-    trs += dz[i];
-  }
-  return trs;
-}
-const isPalindrome = function (w) {
-  const reversed = reverseString1(w);
-  return reversed == w
-    ? `${w} bir palindrome texttir`
-    : `${w} bir palindrome text değildir`;
-};
-console.log(isPalindrome("nazan"));
-console.log(isPalindrome("ali"));
-console.log(isPalindrome("kazak"));
+// // 7- Belirli bir string ifadenin terside aynı kelime ise buna palindrome kelime denir. Örn: NAZAN, KAZAK, TİRİT ..Girilen bir kelimenin palindrome olup olmadığını bulan fonksiyonu yazınız...
+// function reverseString1(dz) {
+//   let trs = "";
+//   for (let i = dz.length - 1; i >= 0; i--) {
+//     trs += dz[i];
+//   }
+//   return trs;
+// }
+// const isPalindrome = function (w) {
+//   const reversed = reverseString1(w);
+//   return reversed == w
+//     ? `${w} bir palindrome texttir`
+//     : `${w} bir palindrome text değildir`;
+// };
+// console.log(isPalindrome("nazan"));
+// console.log(isPalindrome("ali"));
+// console.log(isPalindrome("kazak"));
 
 
-//8-konsoldan girilen harf sayısının kaç tane olduğunu aşağıda verilen metinde bulan uygulamayı yazınız.
-let metin =
-  "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, omnis temporibus dignissimos officia adipisci sed quasi ratione dolorum neque cumque quia quibusdam ullam possimus. Magnam facilis tenetur, laudantium a dolorum explicabo, corporis deleniti aspernatur excepturi distinctio, voluptate est! Quibusdam, blanditiis?";
-// let harf = prompt("harfi giriniz");
-function harfBul(harf) {
-  let counter = 0;
-  for (let i = 0; i < metin.length; i++) {
-    if (metin.charAt(i).toLowerCase() === harf.toLowerCase()) counter += 1;
-  }
-  return counter;
-}
-// console.log(harfBul(harf));
-// 9- Belirli bir string ifadenin içindeki sesli harfleri bulan fonksiyonu yazınız?
-// console.log(findVowels('hello world')) // output: eoo
-const sntc = "hello world";
-function findVowels(sntc) {
-  let vowels = "";
-  for (let i = 0; i < sntc.length; i++) {
-    if (
-      sntc[i] == "a" ||
-      sntc[i] == "e" ||
-      sntc[i] == "ı" ||
-      sntc[i] == "i" ||
-      sntc[i] == "o" ||
-      sntc[i] == "ö" ||
-      sntc[i] == "u" ||
-      sntc[i] == "ü"
-    ) {
-      vowels += sntc[i];
-    }
-  }
-  return vowels;
-}
-console.log(findVowels(sntc));
-console.log(findVowels("alex"));
-console.log(findVowels("mehmet"));
-console.log(findVowels("araba"));
-console.log(findVowels("ahmet"));
+// //8-konsoldan girilen harf sayısının kaç tane olduğunu aşağıda verilen metinde bulan uygulamayı yazınız.
+// let metin =
+//   "   Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, omnis temporibus dignissimos officia adipisci sed quasi ratione dolorum neque cumque quia quibusdam ullam possimus. Magnam facilis tenetur, laudantium a dolorum explicabo, corporis deleniti aspernatur excepturi distinctio, voluptate est! Quibusdam, blanditiis?";
+// // let harf = prompt("harfi giriniz");
+// function harfBul(harf) {
+//   let counter = 0;
+//   for (let i = 0; i < metin.length; i++) {
+//     if (metin.charAt(i).toLowerCase() === harf.toLowerCase()) counter += 1;
+//   }
+//   return counter;
+// }
+// // console.log(harfBul(harf));
+// // 9- Belirli bir string ifadenin içindeki sesli harfleri bulan fonksiyonu yazınız?
+// // console.log(findVowels('hello world')) // output: eoo
+// const sntc = "hello world";
+// function findVowels(sntc) {
+//   let vowels = "";
+//   for (let i = 0; i < sntc.length; i++) {
+//     if (
+//       sntc[i] == "a" ||
+//       sntc[i] == "e" ||
+//       sntc[i] == "ı" ||
+//       sntc[i] == "i" ||
+//       sntc[i] == "o" ||
+//       sntc[i] == "ö" ||
+//       sntc[i] == "u" ||
+//       sntc[i] == "ü"
+//     ) {
+//       vowels += sntc[i];
+//     }
+//   }
+//   return vowels;
+// }
+// console.log(findVowels(sntc));
+// console.log(findVowels("alex"));
+// console.log(findVowels("mehmet"));
+// console.log(findVowels("araba"));
+// console.log(findVowels("ahmet"));
 
-const worker = {
-  name: "can",
-  surname:"canan",
-  age: "33",
-  languages: ["go", "JS", "react"],
-  salary :100000
-};
-console.log(worker);
-worker.newName = "Ahmet",
-worker.newSurname = "Atmaca",
+// const worker = {
+//   name: "can",
+//   surname:"canan",
+//   age: "33",
+//   languages: ["go", "JS", "react"],
+//   salary :100000
+// };
+// console.log(worker);
+// worker.newName = "Ahmet",
+// worker.newSurname = "Atmaca",
 
 
-worker.languages.forEach((l)=>console.log(l));
-worker["languages"].forEach((l)=>console.log(l));
-console.log(worker);
+// worker.languages.forEach((l)=>console.log(l));
+// worker["languages"].forEach((l)=>console.log(l));
+// console.log(worker);
 
-const person = worker;
-person.dob = 20000;
-console.log({person});
-console.log({worker});
+// const person = worker;
+// person.dob = 20000;
+// console.log({person});
+// console.log({worker});
 
 const people = {
   person1: {
@@ -244,3 +244,11 @@ const people = {
   },
   person4: "JS",
 };
+console.log(people);
+console.log(people.person1.name);
+console.log(people["person2"].name);
+
+for(let p in people){
+  console.log(p);
+  console.log(people[p].name);
+}
