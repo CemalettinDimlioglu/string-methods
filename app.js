@@ -282,5 +282,25 @@ Object.values(people).forEach((p)=>console.log(p));
 
 //? job u developer olanları yazınız
 
-const dobs =Object.values(people).filter((p)=>p.job === "developer").map((p)=>p.dob);
+const dobs =Object.values(people).filter((p)=>p.job === "developer")
+// .map((p)=>p.dob);
 console.log(dobs);
+
+
+//?JSON => JavaScript Object Notation
+const team = [
+  { name: "Josh", surname: "Adams", job: "developer", age: 30 },
+  { name: "Mary", surname: "Bary", job: "tester", age: 22 },
+  { name: "Hazel", surname: "Nut", job: "developer", age: 20 },
+]; //* JSON
+// console.log(team);
+// console.log(team[1]);
+//? team dizisine veri ekledik
+team.push({ name: "Ahmet", surname: "yilmaz", job: "developer", age: 22 });
+// console.log(team);
+//ÖRNEKLER
+//* Ornek1: team dizisindeki job'lari tek tek yazdiriniz.
+team.forEach((p) => console.log(p.job));
+//* Ornek2: age'leri bir artirarak yeni bir diziye saklayiniz.
+const agesIncByOne = team.map((x) => x.age + 1);
+console.log(agesIncByOne);
