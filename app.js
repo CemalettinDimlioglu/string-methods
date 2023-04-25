@@ -195,3 +195,24 @@ console.log(findVowels("alex"));
 console.log(findVowels("mehmet"));
 console.log(findVowels("araba"));
 console.log(findVowels("ahmet"));
+
+const worker = {
+  name: "can",
+  surname:"canan",
+  age: "33",
+  languages: ["go", "JS", "react"],
+  salary :100000
+};
+console.log(worker);
+worker.newName = "Ahmet",
+worker.newSurname = "Atmaca",
+
+
+worker.languages.forEach((l)=>console.log(l));
+worker["languages"].forEach((l)=>console.log(l));
+console.log(worker);
+
+const person = worker;
+person.dob = 20000;
+console.log({person});
+console.log({worker});
