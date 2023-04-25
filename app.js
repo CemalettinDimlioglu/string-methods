@@ -265,6 +265,22 @@ for(let s in people){
   console.log(people[s].salary);
   console.log(people[s].name);
 }
+
+//! object methods (3 türlü ulasım)
 console.log(Object.keys(people));
 console.log(Object.values(people));
 console.log(Object.entries(people));
+
+
+// for(let k in Object.keys(people)){
+//   console.log(k);
+// }
+Object.keys(people).forEach((p)=>console.log(p));
+Object.values(people).forEach((p)=>console.log(p));
+
+// Object.values(people).filter((p)=>p.job ==="developer").map((p))
+
+//? job u developer olanları yazınız
+
+const dobs =Object.values(people).filter((p)=>p.job === "developer").map((p)=>p.dob);
+console.log(dobs);
