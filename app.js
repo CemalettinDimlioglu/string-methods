@@ -252,3 +252,19 @@ for(let p in people){
   console.log(p);
   console.log(people[p].name);
 }
+
+
+//? person 2 ad ve maaşı
+
+console.log(people.person2.name);
+console.log(people.person2.salary);
+
+//? tüm maaşları yazdır
+
+for(let s in people){
+  console.log(people[s].salary);
+  console.log(people[s].name);
+}
+console.log(Object.keys(people));
+console.log(Object.values(people));
+console.log(Object.entries(people));
