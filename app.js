@@ -304,3 +304,4 @@ team.forEach((p) => console.log(p.job));
 //* Ornek2: age'leri bir artirarak yeni bir diziye saklayiniz.
 const agesIncByOne = team.map((x) => x.age + 1);
 console.log(agesIncByOne);
+
