@@ -135,3 +135,19 @@ const css = js.previousElementSibling
 console.log(css.innerText) //? CSS
 const django = js.nextElementSibling.nextElementSibling
 console.log(django.innerHTML) //? Django
+
+
+
+console.log("**** CREATE NODE ****");
+const newPar = document.createElement("p");
+// console.log(newPar);
+const text = document.createTextNode("Bu bir p elementidir.");
+// console.log(newPar);
+// console.log(text);
+newPar.appendChild(text);
+console.log(newPar);
+const hasan = document.querySelector(".item-list h2");
+hasan.after(newPar);
+//? id ,class
+newPar.id = "par";
+newPar.className = "white";
