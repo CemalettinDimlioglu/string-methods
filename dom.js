@@ -195,6 +195,8 @@ document.getElementById("btn").after(newDiv);
 newDiv.innerHTML += `<li id="go" class="red">Go</li>`;
 
 
+//? EVENTS 
+
 
 
 
