@@ -197,6 +197,38 @@ newDiv.innerHTML += `<li id="go" class="red">Go</li>`;
 
 //? EVENTS 
 
+console.log("****** EVENTS *******");
+//* EXAMPLE-1 (Mouse Over, Mouse Out )
+//* -------------------------------------------------------
+const h1 = document.querySelector("header h1");
+const langInput = document.getElementById("input");
+const buton = document.getElementById("btn");
+h1.onmouseover = function () {
+  h1.style.color = "red";
+};
+h1.onmouseout = () => {
+  h1.style.color = "yellow";
+};
+buton.addEventListener("click", () => {
+  console.log(langInput.value);
+  langInput.value = "";
+  langInput.focus();
+});
+langInput.addEventListener("keydown", (event) => {
+  if (event.code === "Enter") {
+    buton.click();
+    console.log(event);
+  }
+});
+
+
+
+
+
+
+
+
+
 
 
 
