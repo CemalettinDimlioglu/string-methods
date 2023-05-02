@@ -140,6 +140,35 @@ mag1111.setPrice(100, 1.2);
 console.log(mag1111);
 console.log(mag1111.getSummary());
 
+//? sencron
+
+/*==================================================
+//*        1- Senkron-Asenkron Programlama
+//*==================================================
+//! Javascript, single-threaded ve Asenkron Programlama dilidir.
+//? Asenkron Programlama
+//? --------------------------------------------------------------
+//? Asenkron Programlama, bir alt gorevin uygulamanin asil thread'inden
+//? bagimsiz olarak arka planda calistirilmasina izin veren paralel programlama
+//? teknigidir. Bu alt gorev tamamlandiginda (basriyla veya basarisizlikla)
+//? asil thread bu konuda bilgilendirilir. Asenkron programlama, uygulamalarin
+//? performansininin artirilmasina ve daha iyi kullanici deneyimine katki saglamaktadir.
+//? Ozellikle bir API'den veya Veritabanindan veri cekme, Giris/Cikis islemleri,
+//? Dosya Okuma/Yazma islemleri gibi zaman tuketen kodlarda Asyn Programlama
+//? kullanilmasi cok onemlidir.
+//* Senkron
+//* ------------------------------------------------
+const wait = (waitingTime) => {
+  const starTime = new Date().getTime()
+  while (new Date().getTime() < starTime + waitingTime) {}
+}
+console.log("hello")
+// alert("hi") //? blocking code
+console.time("myTimer")
+wait(2000) //? blocking code
+console.timeEnd("myTimer")
+console.log("fs13")
+
 
 
 
