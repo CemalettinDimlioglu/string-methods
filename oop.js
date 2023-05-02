@@ -169,6 +169,21 @@ wait(2000) //? blocking code
 console.timeEnd("myTimer")
 console.log("fs13")
 
+//? asenkron
+
+* Asenkron (setTimeout)
+*------------------------------------------------
+console.log("Timeout started")
+setTimeout(() => {
+  //? non-blocking code- asyn
+  console.log("1 sec")
+}, 1000)
+console.log("Timeout finished")
+setTimeout(() => {
+  //? non-blocking code- asyn
+  console.log("2 sec")
+}, 1000)
+
 
 
 
