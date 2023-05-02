@@ -93,6 +93,53 @@ console.log(mag1);
 console.log(mag1.getAge());
 console.log(mag1.getSummary());
 
+//* Polymorphism, bir degisken, fonksiyon veya nesnenin çoklu sekiller
+//* alabilmesini tanimlayan bir nesne-yonelimli programlama teknigidir.
+//* Polymorphism, genellikle Overloading ve Overriding gibi alt kavramlar
+//* ile bilinir.
+//JavaScript'te polimorfizm, farklı tipte nesnelerin aynı arayüzü veya metotları paylaşarak benzer şekilde davranmalarını sağlayan bir programlama kavramıdır. Bu, aynı işlevin farklı veri tipleri için farklı işlemler gerçekleştirmesine olanak tanır.
+//Örneğin, bir "Shape" (şekil) sınıfı oluşturabiliriz ve bu sınıftan türetilen "Rectangle" (dikdörtgen) ve "Circle" (çember) sınıfları oluşturabiliriz. Her iki sınıf da "area" (alan) metoduna sahip olabilir. Ancak dikdörtgenin alanı uzunluk ve genişliğin çarpımı ile hesaplanırken, çemberin alanı yarıçapın karesinin pi sayısı ile çarpılmasıyla hesaplanır.
+//Bu durumda, dikdörtgen ve çember nesnelerinin her ikisi de Shape sınıfının birer örneği olsa da, her biri "area" metodu farklı bir şekilde uygular. Bu, polimorfizmin bir örneğidir.
+class Book3 {
+  constructor(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+  }
+  getSummary() {
+    return `${this.title} was writtten by ${this.author} in ${this.year}`;
+  }
+  getAge() {
+    return `${new Date().getFullYear() - this.year}`;
+  }
+  setPrice(price) {
+    const taxRate = 1.1;
+    this.price = Math.trunc(price.taxRate);
+  }
+}
+class Magazine3 extends Book3 {
+  constructor(title, author, year, month) {
+    super(title, author, year);
+    this.month = month;
+  }
+  //! Overloaded Metot (Ayni metodun farkli parametreler ile kullanilmasi)
+  setPrice(price, taxRate) {
+    this.price = Math.trunc(price * taxRate);
+  }
+  //! Overrided Metot (Parent class'daki bir metodun farkli
+  //! fonksiyonellikle ve ayni parametre listesi ile yeniden tanimlanmasi)
+  getSummary() {
+    return `${this.title} was writtten by ${this.author} in ${this.year} in ${this.month}`;
+  }
+}
+const mag1111 = new Magazine3("SRE", "Einstion", 1930, "Nov");
+console.log(mag1111);
+console.log(mag1111.getAge());
+//?Overloaded Metot cagriliyor.
+mag1111.setPrice(100, 1.2);
+console.log(mag1111);
+console.log(mag1111.getSummary());
+
 
 
 
