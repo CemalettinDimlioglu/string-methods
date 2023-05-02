@@ -185,6 +185,19 @@ setTimeout(() => {
 }, 1000)
 
 
+/* Asenkron (setInterval, clearInterval)
+//*------------------------------------------------
+console.log("Timer started")
+let counter = 0
+let sec1 = setInterval(() => {
+  console.log(++counter)
+  if (counter > 3) {
+    clearInterval(sec1)
+    console.log("Timer stoped")
+  }
+}, 1000)
+
+
 
 
 
