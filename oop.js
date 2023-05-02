@@ -44,3 +44,14 @@ book11.price = 200;
 book22.price = 300;
 console.log(book11, book22);
 console.log(new Date().getFullYear());
+
+//? inheritance
+
+function Magazine(title, author, year, month) {
+  Book.call(this, title, author, year);
+  this.month = month;
+}
+Magazine.prototype = Object.create(Book.prototype);
+const mag11 = new Magazine("SRE", "Einstein", 1930, "Nov");
+console.log(mag11);
+console.log(mag11.getSummary());
